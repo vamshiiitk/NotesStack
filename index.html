@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en-US" ng-app="noteStack">
+<head>
+    <meta charset="UTF-8">
+    <title>Notesstack</title>
+    <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/Elusive-icons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+ </head>
+
+<body>
+ <div class="page-header">
+            <header>
+            <div id="fixed-nav">
+                <img src="img/buildboot.jpg" alt="home" class="home"/>
+                <input type="search" class="searchbox"> <i class="el-icon-search searchboxicon"></i>
+                <div id="navbuttons">
+                    <button class="button">Write</button>
+                    <button class="button" id="login">Login</button>
+                        <div id="loginform" style="display: none;">
+                            <input type="text" id="loginemail" placeholder="Email"> <br />
+                            <input type="password" id="loginpassword" placeholder="Password"> <br />
+                            <input type="checkbox" checked class="terms" > Keep me logged in <br />
+                            <button id="login2">Login </button> <br />
+                        </div>
+                    <button class="button" id="signup">Sign Up</button>     <br />
+                        <div id="signupform" style="display: none;">
+                                <input type="email" id="signupemail" placeholder="Email"> <br />
+                                <input type="password" id="signuppassword" placeholder="Password"> <br />
+                                <input type="password" id="reenterpassword" placeholder="Re enter Password"><br />
+                                <input type="checkbox" checked class="terms" > Accept Terms and Conditions <br />
+                                <button id="signup2">Sign Up </button> <br />
+                        </div>
+                </div>
+            </div>
+                <div id="logo"> <h1> N O T E S S T A C K </h1> </div>
+            </header>
+        </div>
+
+	<div>		
+		<section>
+			<div ng-view="">
+			</div>
+		</section>
+	</div>
+
+
+
+
+
+
+    <script type="application/javascript" src="js/angular.min.js"></script>	
+	<script type="application/javascript" src="js/angular-route.js"></script>	
+	<script type="application/javascript" src="app/app.js"></script>
+	<script type="application/javascript" src="app/controllers/controller.js"></script>
+
+<script src="js/bootstrap.js"></script>
+<script src="js/controllers/updateCntrl.js"></script>
+</body>
+</html>

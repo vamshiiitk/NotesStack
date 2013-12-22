@@ -1,0 +1,52 @@
+<div>       
+        <div class="panel">
+            <div id="stream">
+                <i class="el-icon-magnet"></i>
+                <h4>Stream</h4>
+                <i class="el-icon-ok"> <p>Top Notes </p></i>  <br />
+                <i class="el-icon-ok"> <p>Crew Picks </p></i> <br />
+                <i class="el-icon-ok"> <p>New Notes </p></i>  <br />
+                <i class="el-icon-ok"> <p>Following </p></i>  <br />
+            </div>
+            <div id="tags">
+                <i class="el-icon-tags"></i>
+                <h4>Tags</h4>
+                <h6 ng-repeat = "tag in updates | limitTo: 3" class="tagnames">
+                    <a href="#">{{ tag.tags[0] }}</a>
+                </h6>
+                <a class="alltags" href="#">See all tags</a>
+            </div>
+            <div id="discover">
+               <i class="el-icon-filter"> </i>
+                <h4>Discover</h4>
+            </div>
+        </div>
+        <div  class='updates'>
+             <h3 class='title'></h3>
+             <h4 class='subtitle'></h4>
+             <div id="bluepanel">
+                 <p><i class="el-icon-file"></i> 3 pages</p>
+                 <i class="el-icon-tag"></i>
+                 <ul class="btag"><li ng-repeat= "tag in update.tags"></li></ul>
+                 <p><i class="el-icon-filter"></i>Analysis</p>
+             </div>
+             <div id="greenpanel">
+                  <table>
+                     <tr>
+                     <td><i class="el-icon-align-justify"></i></td>
+                     <td><i class="el-icon-thumbs-up"></i></td>
+                     <td><i class="el-icon-comment"></i></td>
+                     </tr>
+                     <tr>
+                     <td>Restack</td>
+                     <td>Like</td>
+                     <td>Comment</td>
+                     </tr>
+                  </table>
+             </div>
+            <div id="followpanel">
+                <h6 class="user">{{ update.user }}</h6>
+                <a href="#"> <img class="btn-circle" src="img/Follow.jpg"> </a>
+            </div>
+        </div>
+    </div>
